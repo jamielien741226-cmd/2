@@ -8,12 +8,9 @@ options:
 
 settings:
   base:
-    SWIFT_VERSION: "5.9"
+    SWIFT_VERSION: "5"
     TARGETED_DEVICE_FAMILY: "1"
     PRODUCT_BUNDLE_IDENTIFIER: com.local.baiyuenav.app
-    INFOPLIST_KEY_NSLocationWhenInUseUsageDescription: "百岳導航需要您的位置資訊以顯示目前座標與路線進度。"
-    INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription: "百岳導航需要背景定位與路線記錄功能，即使螢幕鎖定也能持續追蹤軌跡。"
-    INFOPLIST_KEY_UIBackgroundModes: "location"
 
 targets:
   BaiyueNav:
@@ -26,7 +23,10 @@ targets:
           - "build/**"
           - "project.yml"
           - "*.md"
+          - "*.sample"
+    info:
+      path: Info.plist
     settings:
       base:
         PRODUCT_NAME: BaiyueNav
-        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: Info.plist
