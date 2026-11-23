@@ -23,7 +23,9 @@ targets:
           - "build/**"
           - "project.yml"
           - "*.md"
+          - "**/*.md"
           - "*.sample"
+          - "**/*.sample"
     info:
       path: Info.plist
     settings:
